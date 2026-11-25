@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+<template id="__bundler_thumbnail" data-bg-color="#fbf8fb">
+<svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+<rect width="1200" height="800" fill="#fbf8fb"/>
+<rect x="120" y="300" width="440" height="60" rx="14" fill="#78264b"/>
+<rect x="120" y="384" width="360" height="28" rx="10" fill="#d9c3ce"/>
+<rect x="120" y="424" width="300" height="28" rx="10" fill="#d9c3ce"/>
+<rect x="660" y="200" width="420" height="400" rx="40" fill="#f0e0e9" stroke="#eadde5" stroke-width="4"/>
+<circle cx="870" cy="400" r="90" fill="#78264b"/>
+</svg>
+</template>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body{margin:0}
+    a{color:inherit;text-decoration:none}
+    a:hover{color:#78264b}
+    @keyframes rv-scan{0%,100%{top:18%;opacity:.25}50%{top:78%;opacity:1}}
+  </style>
+</helmet>
+<div style="font-family:'DM Sans',sans-serif;color:#18121b;background:#fbf8fb;overflow-x:hidden;position:relative;min-height:100vh">
+  <div style="position:fixed;inset:0;pointer-events:none;background-image:radial-gradient(rgba(78,24,51,.08) 1px,transparent 1px);background-size:24px 24px;opacity:.16;z-index:0"></div>
+  <div style="position:fixed;border-radius:50%;filter:blur(100px);pointer-events:none;z-index:0;width:520px;height:520px;left:-160px;top:180px;background:rgba(185,102,145,.18)"></div>
+  <div style="position:fixed;border-radius:50%;filter:blur(100px);pointer-events:none;z-index:0;width:580px;height:580px;right:-200px;top:420px;background:rgba(111,37,73,.12)"></div>
+
+  <header style="position:sticky;top:0;z-index:50;width:min(1500px,100%);margin:auto;padding:15px 4vw;display:flex;align-items:center;gap:28px;background:rgba(251,248,251,.82);backdrop-filter:blur(18px);border-bottom:1px solid rgba(234,221,229,.85)">
+    <a href="#top" aria-label="RENOVAA home" style="display:flex;align-items:center;flex-shrink:0">
+      <img src="assets/renovaa-logo-cropped.png" alt="RENOVAA" style="width:230px;display:block" />
+    </a>
+    <nav aria-label="Primary navigation" style="display:flex;gap:26px;align-items:center;margin-left:auto">
+      <a href="#problem" style="font-size:14px;font-weight:700;color:#493f4b">Why RENOVAA</a>
+      <a href="#solution" style="font-size:14px;font-weight:700;color:#493f4b">How it works</a>
+      <a href="#platform" style="font-size:14px;font-weight:700;color:#493f4b">Platform</a>
+      <a href="#pricing" style="font-size:14px;font-weight:700;color:#493f4b">Pricing</a>
+      <a href="#contact" style="font-size:14px;font-weight:700;color:#493f4b">Company</a>
+    </nav>
+    <a href="#contact" style="display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:13px 18px;border-radius:15px;font-size:14px;font-weight:800;background:linear-gradient(135deg,#78264b,#4d1832);color:#fff;box-shadow:0 14px 34px rgba(120,38,75,.23)">Book a demo <span>→</span></a>
+  </header>
+
+  <section style="position:relative;z-index:1;width:min(1500px,100%);margin:auto;padding:54px 4vw 72px;min-height:calc(100vh - 86px);display:grid;grid-template-columns:1.03fr .97fr;gap:38px;align-items:center">
+    <div>
+      <span style="display:inline-block;margin-bottom:14px;color:#78264b;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.18em">AI skin intelligence for modern skincare</span>
+      <h1 style="font:800 clamp(44px,5.2vw,84px)/1.02 'Manrope',sans-serif;margin:0">Turn skincare uncertainty into <em style="font-style:normal;color:#78264b">conversion.</em></h1>
+      <p style="font-size:18px;line-height:1.72;color:#716773;max-width:660px">Turn your customers’ routine uncertainty into conversion. Embed RENOVAA’s skincare analysis tool directly into your website to increase client retention and boost conversion.</p>
+      <div style="display:flex;gap:14px;margin:30px 0">
+        <a href="#contact" style="display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 23px;border-radius:15px;font-weight:800;background:linear-gradient(135deg,#78264b,#4d1832);color:#fff;box-shadow:0 14px 34px rgba(120,38,75,.23)">Book a demo <span>→</span></a>
+        <a href="#solution" style="display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 23px;border-radius:15px;font-weight:800;background:rgba(255,255,255,.75);color:#78264b;border:1px solid #ddc7d3;backdrop-filter:blur(12px)"><span style="font-size:11px">▶</span> See how it works</a>
+      </div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <span style="padding:9px 12px;border-radius:999px;background:#fff;border:1px solid #eadde5;font-size:11px;font-weight:700;color:#5f5360;box-shadow:0 8px 24px rgba(78,24,51,.06)">White-label</span>
+        <span style="padding:9px 12px;border-radius:999px;background:#fff;border:1px solid #eadde5;font-size:11px;font-weight:700;color:#5f5360;box-shadow:0 8px 24px rgba(78,24,51,.06)">Dermatologist-validated guidance</span>
+        <span style="padding:9px 12px;border-radius:999px;background:#fff;border:1px solid #eadde5;font-size:11px;font-weight:700;color:#5f5360;box-shadow:0 8px 24px rgba(78,24,51,.06)">Designed for rapid deployment</span>
+      </div>
+    </div>
+
+    <div style="position:relative;padding:14px;border-radius:30px;background:linear-gradient(145deg,rgba(255,255,255,.9),rgba(246,232,240,.8));border:1px solid #eadde5;box-shadow:0 22px 60px rgba(75,24,50,.12);overflow:hidden">
+      <video src="uploads/heroloop.webm" autoplay loop muted playsinline style="width:100%;display:block;border-radius:22px"></video>
+    </div>
+  </section>
+</div>
+</x-dc>
+</body>
+</html>

@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+<template id="__bundler_thumbnail" data-bg-color="#fbf8fb">
+<svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+<rect width="1200" height="800" fill="#fbf8fb"/>
+<rect x="110" y="300" width="440" height="58" rx="14" fill="#78264b"/>
+<rect x="110" y="382" width="360" height="26" rx="10" fill="#d9c3ce"/>
+<rect x="110" y="420" width="300" height="26" rx="10" fill="#d9c3ce"/>
+<circle cx="860" cy="400" r="150" fill="#f0e0e9"/>
+<circle cx="860" cy="400" r="88" fill="#78264b"/>
+</svg>
+</template>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Manrope:wght@500;600;700;800&amp;display=swap" rel="stylesheet">
+  <style>
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0}
+    a{color:inherit;text-decoration:none}
+    a:hover{color:#78264b}
+    @keyframes rv-pulse{70%{box-shadow:0 0 0 11px rgba(189,82,127,0)}}
+    @media(max-width:900px){
+      .rv-page-scale{transform:none!important;width:100%!important;margin-left:0!important}
+      .rv-nav{display:none!important}
+      .rv-hero{min-height:0!important;padding-top:12px!important;padding-bottom:16px!important}
+      .rv-hero-content{max-width:100%!important;padding-top:32px!important}
+      .rv-hero-video-wrap{min-height:220px!important}
+      .rv-page-scale{width:100%!important;margin-left:0!important;transform:none!important}
+      @media(min-width:901px){.rv-page-scale{transform:scale(.8)!important;transform-origin:top center;width:125%!important;margin-left:-12.5%!important}}
+      @media(max-width:560px){
+        header#top{padding:12px 16px!important;gap:10px!important;justify-content:space-between!important}
+        header#top img{width:128px!important}
+        header#top .rv-nav{display:none!important}
+        header#top a[href="#contact"]{font-size:14px!important;padding:11px 14px!important;border-radius:12px!important}
+        .rv-page-scale{overflow-x:hidden!important;width:100%!important;max-width:100%!important}
+        .rv-page-scale *{max-width:100%!important;box-sizing:border-box!important}
+        .rv-page-scale section{padding-left:18px!important;padding-right:18px!important;padding-top:44px!important;padding-bottom:44px!important;margin-left:0!important;margin-right:0!important;width:100%!important;border-radius:0!important}
+        .rv-page-scale h1{font-size:30px!important;line-height:1.12!important;letter-spacing:-.01em!important}
+        .rv-page-scale h2{font-size:26px!important;line-height:1.15!important}
+        .rv-page-scale h3{font-size:19px!important;line-height:1.25!important}
+        .rv-page-scale p{font-size:15px!important;line-height:1.55!important}
+        .rv-page-scale [style*="grid-template-columns"]{grid-template-columns:1fr!important;gap:14px!important}
+        .rv-page-scale [style*="repeat(5"]{grid-template-columns:repeat(3,1fr)!important}
+        .rv-page-scale img{max-width:100%!important;height:auto!important}
+        .rv-page-scale [style*="padding:96px"],.rv-page-scale [style*="padding:70px"]{padding:44px 18px!important}
+        .rv-page-scale .rv-hero-video-wrap{display:flex!important;justify-content:center!important;min-height:240px!important;flex:none!important;padding:24px 0 0!important}
+        .rv-page-scale .rv-hero-video-wrap video{display:block!important;width:78%!important;max-width:300px!important;height:auto!important;margin:0 auto!important;-webkit-mask-image:none!important;mask-image:none!important;-webkit-mask-composite:none!important;mask-composite:none!important;opacity:1!important;visibility:visible!important}
+        .rv-page-scale [id="pricing"] article{padding:22px 18px!important;border-radius:20px!important}
+        .rv-page-scale [id="pricing"] ul{gap:6px!important;margin-bottom:10px!important}
+        .rv-page-scale [id="pricing"] li{font-size:14px!important;line-height:1.4!important}
+        .rv-page-scale [id="pricing"] article > div{margin-bottom:12px!important}
+        .rv-page-scale [id="pricing"] article p{font-size:13px!important;line-height:1.45!important}
+        .rv-page-scale [id="pricing"] article h3{font-size:18px!important}
+      }
+.rv-demo{position:relative;width:100%;max-width:500px;margin:0 auto;min-width:0;border-radius:20px;overflow:hidden;background:#000;box-shadow:0 30px 80px rgba(78,24,51,.18)}
+.rv-demo video{display:block;width:100%;cursor:pointer}
+.rv-demo-bar{position:absolute;left:0;right:0;bottom:0;display:flex;align-items:center;gap:10px;padding:18px 14px 10px;background:rgba(0,0,0,.6);opacity:0;transition:opacity .25s ease;color:#fff;font:600 12px 'Manrope',sans-serif}
+.rv-demo:hover .rv-demo-bar,.rv-demo:focus-within .rv-demo-bar{opacity:1}
+.rv-demo-btn{background:none;border:0;color:#fff;padding:4px;cursor:pointer;display:flex;align-items:center}
+.rv-demo input[type=range]{accent-color:#f1cadc;cursor:pointer}
+.rv-demo .rv-ico-pause,.rv-demo .rv-ico-muted{display:none}
+.rv-demo.is-playing .rv-ico-play{display:none}
+.rv-demo.is-playing .rv-ico-pause{display:inline}
+.rv-demo.is-muted .rv-ico-sound{display:none}
+.rv-demo.is-muted .rv-ico-muted{display:inline}
+.rv-demo{background:#fff!important;border:1px solid #d6c2cf!important;box-shadow:0 18px 40px rgba(120,38,75,.14)!important}
+.rv-demo-bar{position:static!important;opacity:1!important;background:#fff!important;color:#3d3541!important;padding:12px 14px!important;border-top:1px solid #f1cadc;font-size:12px!important;transition:none!important}
+.rv-demo-btn{background:#78264b!important;color:#fff!important;border-radius:50%;width:34px;height:34px;justify-content:center;flex:none}
+.rv-demo input[type=range]{accent-color:#78264b!important}
+.rv-demo-bar span{color:#6b5e68;flex:none}
+      .rv-intro{grid-template-columns:1fr!important;gap:10px!important}
+      .rv-track{grid-template-columns:repeat(2,1fr)!important}
+      .rv-line{display:none!important}
+      .rv-proof{grid-template-columns:1fr!important}
+      .rv-platform{grid-template-columns:1fr!important}
+      .rv-analytics{grid-template-columns:1fr!important;padding:48px 24px!important}
+      .rv-pricing-head{flex-direction:column!important;align-items:flex-start!important}
+      .rv-pricing-grid{grid-template-columns:1fr!important}
+      .rv-featured{transform:none!important}
+      .rv-cta{grid-template-columns:1fr!important;padding:48px 24px!important}
+      .rv-footer{grid-template-columns:1fr!important}
+      .rv-footer-links{justify-content:flex-start!important}
+    }
+    @media(max-width:560px){
+      .rv-track{grid-template-columns:1fr!important;gap:16px!important}
+      .rv-intro h2{font-size:34px!important}
+      .rv-intro p{font-size:16px!important;line-height:1.5!important;margin-bottom:8px!important}
+      .rv-track article{padding:12px!important}
+      .rv-track article>span:first-child{font-size:14px!important;margin-bottom:6px!important}
+      .rv-track article>div{width:58px!important;height:58px!important;font-size:16px!important;margin-bottom:10px!important;border-radius:12px!important}
+      .rv-track article h3{font-size:14px!important;margin:0 0 5px!important}
+      .rv-track article p{font-size:11.5px!important}
+      .rv-hero h1{font-size:34px!important}
+      .rv-hero-video-wrap{min-height:0!important;flex:none!important;padding:24px 0 0!important}
+      .rv-actions{flex-direction:column!important;align-items:stretch!important}
+      .rv-form-grid{grid-template-columns:1fr!important}
+    }
+  </style>
+</helmet>
+<div class="rv-page-scale" style="font-family:'DM Sans',sans-serif;color:#18121b;background:#FFFFFF;overflow-x:hidden;position:relative">
+
+  <header id="top" style="position:sticky;top:0;z-index:50;width:min(1500px,100%);max-width:100%;margin:auto;padding:32px 4vw;display:flex;align-items:center;gap:36px;background:rgba(255,255,255,.86);backdrop-filter:blur(18px);border-bottom:1px solid rgba(234,221,229,.85);box-sizing:border-box">
+    <a href="#top" aria-label="RENOVAA home" style="display:flex;align-items:center;flex-shrink:0"><img src="assets/renovaa-logo-cropped.png" alt="RENOVAA" style="width:310px;display:block"></a>
+    <nav class="rv-nav" aria-label="Primary navigation" style="display:flex;gap:22px;align-items:center;margin-left:auto;min-width:0">
+      <a href="#problem" style="font-size:20px;font-weight:700;color:#493f4b">How it works</a>
+      <a href="#pricing" style="font-size:20px;font-weight:700;color:#493f4b">Pricing</a>
+      <a href="live-demos.html" onClick="{{ navigateSoft }}" style="font-size:20px;font-weight:700;color:#493f4b">Try Demo Live</a>
+      <a href="about-renovaa.html" onClick="{{ navigateSoft }}" style="font-size:20px;font-weight:700;color:#493f4b">About Us</a>
+      <a href="partnerships.html" onClick="{{ navigateSoft }}" style="font-size:20px;font-weight:700;color:#493f4b">Partnerships</a>
+    </nav>
+    <a href="#contact" style="display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:20px 30px;border-radius:15px;font-size:20px;font-weight:800;white-space:nowrap;flex-shrink:0;background:#78264b;color:#fff;box-shadow:0 14px 34px rgba(120,38,75,.23);transition:.2s ease" style-hover="transform:translateY(-2px);box-shadow:0 18px 40px rgba(120,38,75,.32)">Contact us <span>→</span></a>
+  </header>
+
+  <main>
+    <section class="rv-hero" style="position:relative;z-index:1;width:100%;min-height:100vh;display:flex;flex-direction:column;align-items:center;overflow:hidden">
+      <div class="rv-hero-content" ref="{{ revealRef }}" style="opacity:1;transform:none;transition:.7s ease;position:relative;z-index:1;width:100%;max-width:1180px;margin:0 auto;padding:72px 4vw 8px;text-align:center;display:flex;flex-direction:column;align-items:center">
+        <span style="display:inline-block;margin-bottom:14px;color:#78264b;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.18em">Personalized software for your customers</span>
+        <h1 style="font:800 clamp(44px,6.4vw,104px)/1.02 'Manrope',sans-serif;margin:0;letter-spacing:-.01em">AI Skin Analysis Ecosystem, built into your website.</h1>
+        <p style="font-size:18px;line-height:1.72;color:#3d3541;max-width:660px;margin-top:20px">Embed RENOVAA directly into your website to analyse each customer’s skin, deliver personalised product recommendations, and turn more visitors into customers. With our data insights and AI agents, every scan feeds a connected system that works for your brand.</p>
+        <div class="rv-actions" style="display:flex;gap:14px;margin:30px 0;justify-content:center">
+          <a href="#contact" style="display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 23px;border-radius:15px;font-weight:800;background:#78264b;color:#fff;box-shadow:0 14px 34px rgba(120,38,75,.23);transition:.2s ease" style-hover="transform:translateY(-2px);box-shadow:0 18px 40px rgba(120,38,75,.32)">Contact us <span>→</span></a>
+          <a href="live-demos.html" onClick="{{ navigateSoft }}" style="display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 23px;border-radius:15px;font-weight:800;background:rgba(255,255,255,.86);color:#78264b;border:1px solid #ddc7d3;backdrop-filter:blur(12px);transition:.2s ease" style-hover="transform:translateY(-2px);background:#fff;box-shadow:0 12px 30px rgba(120,38,75,.14)"><span style="font-size:11px">▶</span> Try Demo Live</a>
+        </div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center">
+          <span style="padding:9px 12px;border-radius:999px;background:#fff;border:1px solid #d6c2cf;font-size:11px;font-weight:700;color:#3d3541;box-shadow:0 8px 24px rgba(78,24,51,.06)">White-label</span>
+          <span style="padding:9px 12px;border-radius:999px;background:#fff;border:1px solid #d6c2cf;font-size:11px;font-weight:700;color:#3d3541;box-shadow:0 8px 24px rgba(78,24,51,.06)">Dermatologist-validated guidance</span>
+          <span style="padding:9px 12px;border-radius:999px;background:#fff;border:1px solid #d6c2cf;font-size:11px;font-weight:700;color:#3d3541;box-shadow:0 8px 24px rgba(78,24,51,.06)">Designed for rapid deployment</span>
+        </div>
+      </div>
+      <div class="rv-hero-video-wrap" style="position:relative;z-index:1;width:100%;flex:1;min-height:340px;display:flex;align-items:center;justify-content:center;overflow:hidden">
+        <video ref="{{ videoRef }}" src="assets/pingpong-loop.mp4" muted="" playsinline="" autoplay="" preload="auto" style="width:50%;max-width:700px;display:block;-webkit-mask-image:linear-gradient(180deg,transparent 0%,#000 12%,#000 78%,transparent 100%),radial-gradient(75% 100% at 50% 55%,#000 60%,transparent 100%);-webkit-mask-composite:source-in;mask-image:linear-gradient(180deg,transparent 0%,#000 12%,#000 78%,transparent 100%),radial-gradient(75% 100% at 50% 55%,#000 60%,transparent 100%);mask-composite:intersect"></video>
+      </div>
+    </section>
+
+    <section id="problem" style="scroll-margin-top:96px;position:relative;z-index:1;width:min(1500px,100%);margin:auto;padding:96px 4vw 48px;background:#FFFFFF">
+      <div class="rv-intro" ref="{{ revealRef }}" style="opacity:1;transform:none;transition:.7s ease;display:grid;grid-template-columns:76px minmax(0,920px);gap:22px;align-items:start;margin-bottom:42px">
+        <span style="font:800 30px/1 'Manrope';color:#78264b">01</span>
+        <div>
+          <span style="display:inline-block;margin-bottom:14px;color:#78264b;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.18em">The RENOVAA journey</span>
+          <h2 style="font:800 clamp(36px,4vw,62px)/1.02 'Manrope',sans-serif;margin:0 0 16px">Your AI beauty advisor, inside your store</h2>
+          <p style="font-size:17px;line-height:1.7;color:#3d3541;margin:0">Skin analysis → guided routine → your product page → cart. Never a generic chatbot. Never a marketplace redirect.</p>
+        </div>
+      </div>
+      <p style="text-align:center;font:800 15px/1 'Manrope',sans-serif;color:#78264b;text-transform:uppercase;letter-spacing:.1em;margin:0 0 42px">Your personalized software</p>
+      <div class="rv-track" ref="{{ revealRef }}" style="opacity:1;transform:none;transition:.7s ease;transition-delay:.12s;position:relative;display:grid;grid-template-columns:repeat(5,1fr);gap:14px">
+        <div class="rv-line" style="position:absolute;left:8%;right:8%;top:54px;height:2px;z-index:0;background:#78264b"></div>
+        <sc-for list="{{ wonSteps }}" as="s" hint-placeholder-count="5">
+          <article style="{{ s.style }}" style-hover="transform:translateY(-6px);box-shadow:0 20px 46px rgba(77,24,50,.14)">
+            <span style="display:block;font-size:11px;font-weight:800;color:#78264b;margin-bottom:12px">{{ s.num }}</span>
+            <div style="width:56px;height:56px;border-radius:16px;display:grid;place-items:center;background:#78264b;color:#fff;font-size:24px;font-weight:800;margin-bottom:22px">{{ s.icon }}</div>
+            <h3 style="font-size:16px;margin:0 0 9px">{{ s.title }}</h3>
+            <p style="font-size:12px;line-height:1.6;color:#3d3541;margin:0">{{ s.body }}</p>
+          </article>
+        </sc-for>
+      </div>
+      <div ref="{{ revealRef }}" style="opacity:1;transform:none;transition:.7s ease;display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin:22px 0 32px">
+        <span style="padding:10px 14px;border-radius:999px;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;background:#f2e4eb;color:#78264b;border:1px solid #dfc6d3">Sale retained</span>
+        <span style="padding:10px 14px;border-radius:999px;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;background:#f2e4eb;color:#78264b;border:1px solid #dfc6d3">First-party data captured</span>
+        <span style="padding:10px 14px;border-radius:999px;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;background:#f2e4eb;color:#78264b;border:1px solid #dfc6d3">Relationship strengthened</span>
+      </div>
+      <div id="platform" class="rv-platform" ref="{{ revealRef }}" style="scroll-margin-top:90px;opacity:1;transform:none;transition:.7s ease;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;margin-top:42px;align-items:start">
+        <div style="width:100%;min-width:0;max-width:100%;box-sizing:border-box;overflow:hidden;display:flex;flex-direction:column;gap:14px"><span style="display:inline-block;color:#78264b;font-size:20px;font-weight:800;text-transform:uppercase;letter-spacing:.1em;font-family:'Manrope',sans-serif">See RENOVAA in action</span>
+          <style>.rv-demo .rv-ico-pause,.rv-demo .rv-ico-muted{display:none}.rv-demo.is-playing .rv-ico-play{display:none}.rv-demo.is-playing .rv-ico-pause{display:inline}.rv-demo.is-muted .rv-ico-sound{display:none}.rv-demo.is-muted .rv-ico-muted{display:inline}</style><div class="rv-demo" style="position:relative;width:100%;max-width:500px;margin:0 auto;border-radius:24px;overflow:hidden;background:#fff;border:1px solid #d6c2cf;box-shadow:0 18px 40px rgba(120,38,75,.14)"><video ref="{{ demoRef }}" src="./assets/6048051bfa5053a2a4ffa62ce77eb919.mp4" poster="./assets/14587a8444853fb0b05073032befe43d.jpg" playsinline="" preload="metadata" onClick="{{ toggleDemo }}" onDblClick="{{ restartDemo }}" style="display:block;width:100%;height:auto;cursor:pointer"></video><div style="display:flex;align-items:center;gap:10px;padding:12px 14px;background:#fff;border-top:1px solid #f1cadc;font:600 12px 'Manrope',sans-serif;color:#3d3541"><button type="button" onClick="{{ toggleDemo }}" aria-label="Play or pause" style="flex:none;width:34px;height:34px;border-radius:50%;border:0;background:#78264b;color:#fff;display:flex;align-items:center;justify-content:center;padding:0;cursor:pointer"><svg class="rv-ico-play" width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="M8 5v14l11-7z"></path></svg><svg class="rv-ico-pause" width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="M6 5h4v14H6zM14 5h4v14h-4z"></path></svg></button><input type="range" min="0" max="100" step="0.1" value="0" ref="{{ seekRef }}" style="flex:1;min-width:0;accent-color:#78264b;cursor:pointer" aria-label="Seek"><span ref="{{ timeRef }}" style="white-space:nowrap;font-variant-numeric:tabular-nums;color:#6b5e68">0:00 / 0:00</span><button type="button" onClick="{{ muteDemo }}" aria-label="Mute or unmute" style="flex:none;width:34px;height:34px;border-radius:50%;border:0;background:#78264b;color:#fff;display:flex;align-items:center;justify-content:center;padding:0;cursor:pointer"><svg class="rv-ico-sound" width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="M3 9v6h4l5 5V4L7 9H3zm13.5 3A4.5 4.5 0 0 0 14 8v8a4.5 4.5 0 0 0 2.5-4z"></path></svg><svg class="rv-ico-muted" width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="M3 9v6h4l5 5V4L7 9H3z"></path><path d="M16 9l6 6M22 9l-6 6" stroke="currentColor" stroke-width="2" fill="none"></path></svg></button><input type="range" min="0" max="1" step="0.05" value="1" ref="{{ volRef }}" style="width:80px;accent-color:#78264b;cursor:pointer" aria-label="Volume"></div></div>
+        </div>
+        <div>
+          <span style="display:inline-block;margin-bottom:14px;color:#78264b;font-size:20px;font-weight:800;text-transform:uppercase;letter-spacing:.1em">Why brands choose RENOVAA</span>
+          <div style="display:grid;gap:12px">
+            <sc-for list="{{ benefits }}" as="b" hint-placeholder-count="4">
+              <article style="display:grid;grid-template-columns:44px 1fr;gap:14px;padding:17px;border-radius:18px;background:rgba(255,255,255,.8);border:1px solid #d6c2cf;transition:.25s ease" style-hover="transform:translateY(-4px);box-shadow:0 16px 38px rgba(77,24,50,.12)">
+                <b style="display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:#78264b;color:#fff;font-size:14px;font-weight:800">{{ b.n }}</b>
+                <div>
+                  <h3 style="font-size:15px;margin:0 0 5px">{{ b.title }}</h3>
+                  <p style="font-size:12px;line-height:1.58;color:#3d3541;margin:0">{{ b.body }}</p>
+                </div>
+              </article>
+            </sc-for>
+          </div>
+          <p style="font-size:12px;line-height:1.58;color:#3d3541;margin-top:16px">RENOVAA is not a medical device and does not diagnose medical conditions. It provides cosmetic, educational, and commercial guidance.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="solution" style="scroll-margin-top:96px;position:relative;z-index:1;width:min(1500px,100%);margin:auto;padding:48px 4vw 96px;background:#FFFFFF">
+      <div class="rv-intro" ref="{{ revealRef }}" style="opacity:1;transform:none;transition:.7s ease;display:grid;grid-template-columns:76px minmax(0,920px);gap:22px;align-items:start;margin-bottom:42px">
+        <span style="font:800 30px/1 'Manrope';color:#78264b">02</span>
+        <div>
+          <span style="display:inline-block;margin-bottom:14px;color:#78264b;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.18em">The customer journey today</span>
+          <h2 style="font:800 clamp(36px,4vw,62px)/1.02 'Manrope',sans-serif;margin:0 0 16px">How skincare brands lose customers</h2>
+          <p style="font-size:17px;line-height:1.7;color:#3d3541;margin:0">The sale is not lost at checkout. It is lost one screen earlier — when an uncertain customer leaves your website to ask somewhere else and never comes back.</p>
+        </div>
+      </div>
+      <div class="rv-track" ref="{{ revealRef }}" style="opacity:1;transform:none;transition:.7s ease;transition-delay:.12s;position:relative;display:grid;grid-template-columns:repeat(5,1fr);gap:14px">
+        <div class="rv-line" style="position:absolute;left:8%;right:8%;top:54px;height:2px;z-index:0;background:#78264b"></div>
+        <sc-for list="{{ lostSteps }}" as="s" hint-placeholder-count="5">
+          <article style="{{ s.style }}" style-hover="transform:translateY(-6px);box-shadow:0 20px 46px rgba(77,24,50,.14)">
+            <span style="display:block;font-size:11px;font-weight:800;color:#78264b;margin-bottom:12px">{{ s.num }}</span>
+            <div style="width:56px;height:56px;border-radius:16px;display:grid;place-items:center;background:#78264b;color:#fff;font-size:24px;font-weight:800;margin-bottom:22px">{{ s.icon }}</div>
+            <h3 style="font-size:16px;margin:0 0 9px">{{ s.title }}</h3>
+            <p style="font-size:12px;line-height:1.6;color:#3d3541;margin:0">{{ s.body }}</p>
+          </article>
+        </sc-for>
+      </div>
+      <div ref="{{ revealRef }}" style="opacity:1;transform:none;transition:.7s ease;display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin:22px 0 32px">
+        <span style="padding:10px 14px;border-radius:999px;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;background:#efedef;color:#66616a;border:1px solid #dddadd">Sale lost</span>
+        <span style="padding:10px 14px;border-radius:999px;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;background:#efedef;color:#66616a;border:1px solid #dddadd">Customer data lost</span>
+        <span style="padding:10px 14px;border-radius:999px;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;background:#efedef;color:#66616a;border:1px solid #dddadd">Relationship lost</span>
+      </div>
+      <div class="rv-proof" ref="{{ revealRef }}" style="opacity:1;transform:none;transition:.7s ease;display:grid;grid-template-columns:repeat(3,1fr);gap:14px">
+        <sc-for list="{{ proof }}" as="p" hint-placeholder-count="3">
+          <article style="padding:24px;border-radius:22px;border:1px solid #d6c2cf;box-shadow:0 14px 38px rgba(77,24,50,.07);background:rgba(255,255,255,.92);transition:.25s ease" style-hover="transform:translateY(-6px);box-shadow:0 20px 46px rgba(77,24,50,.14)">
+            <strong style="display:block;font:800 44px/1 'Manrope';color:#78264b;margin-bottom:12px">{{ p.n }}</strong>
+            <p style="font-size:13px;line-height:1.58;color:#3d3541;margin:0">{{ p.body }}</p>
+          </article>
+        </sc-for>
+      </div>
+    </section>
+
+    <section style="position:relative;z-index:1;width:min(1500px,100%);margin:auto;padding:0 4vw">
+      <div class="rv-analytics" style="display:grid;grid-template-columns:.72fr 1.28fr;gap:28px;align-items:center;background:#2b1a24;color:#fff;border-radius:34px;margin:32px 0;overflow:hidden;padding:96px 4vw">
+        <div ref="{{ revealRef }}" style="opacity:1;transform:none;transition:.7s ease">
+          <span style="display:inline-block;margin-bottom:14px;color:#f1cadc;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.18em">Every scan becomes customer intelligence</span>
+          <h2 style="font:800 clamp(36px,4vw,60px)/1.02 'Manrope',sans-serif;margin:0 0 16px">Understand what customers need — and what converts.</h2>
+          <p style="font-size:17px;line-height:1.7;color:rgba(255,255,255,.72);margin:0">See concern patterns, recommendation performance, scan-to-purchase attribution, repeat journeys, and revenue impact in one dashboard.</p>
+          <ul style="list-style:none;padding:0;margin:24px 0">
+            <li style="margin:11px 0;color:rgba(255,255,255,.86);font-size:13px"><span style="color:#f1cadc;margin-right:10px">✓</span>Most common skin concerns</li>
+            <li style="margin:11px 0;color:rgba(255,255,255,.86);font-size:13px"><span style="color:#f1cadc;margin-right:10px">✓</span>Top recommended products</li>
+            <li style="margin:11px 0;color:rgba(255,255,255,.86);font-size:13px"><span style="color:#f1cadc;margin-right:10px">✓</span>Scan-to-product-click conversion</li>
+            <li style="margin:11px 0;color:rgba(255,255,255,.86);font-size:13px"><span style="color:#f1cadc;margin-right:10px">✓</span>Scan-to-purchase attribution</li>
+            <li style="margin:11px 0;color:rgba(255,255,255,.86);font-size:13px"><span style="color:#f1cadc;margin-right:10px">✓</span>Repeat scans and progress journeys</li>
+            <li style="margin:11px 0;color:rgba(255,255,255,.86);font-size:13px"><span style="color:#f1cadc;margin-right:10px">✓</span>AI support inside the dashboard, powered by your own AI agents</li>
+          </ul>
+          <a href="#contact" style="display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 23px;border-radius:15px;font-weight:800;background:rgba(255,255,255,.75);color:#78264b;border:1px solid #ddc7d3;transition:.2s ease" style-hover="transform:translateY(-2px);background:#fff;box-shadow:0 12px 30px rgba(0,0,0,.18)">Explore the dashboard <span>→</span></a>
+        </div>
+        <div ref="{{ revealRef }}" style="opacity:1;transform:none;transition:.7s ease;transition-delay:.12s;padding:14px;border-radius:28px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);box-shadow:0 24px 70px rgba(0,0,0,.24)">
+          <img src="assets/dashboard-preview.png" alt="RENOVAA analytics dashboard" style="border-radius:20px;width:100%;display:block">
+        </div>
+      </div>
+    </section>
+
+    <section id="pricing" style="scroll-margin-top:96px;position:relative;z-index:1;width:min(1500px,100%);margin:auto;padding:96px 4vw">
+      <div class="rv-pricing-head" ref="{{ revealRef }}" style="opacity:1;transform:none;transition:.7s ease;display:flex;justify-content:space-between;gap:28px;align-items:end;margin-bottom:38px">
+        <div>
+          <span style="display:inline-block;margin-bottom:14px;color:#78264b;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.18em">Transparent pricing</span>
+          <h2 style="font:800 clamp(36px,4vw,62px)/1.02 'Manrope',sans-serif;margin:0">Start quickly. Scale when the data proves it.</h2>
+        </div>
+        <div style="display:flex;align-items:center;gap:14px;flex-shrink:0;white-space:nowrap;padding:10px 16px;border-radius:999px;background:#fff;border:1px solid #d6c2cf;box-shadow:0 10px 26px rgba(75,24,50,.08)">
+          <span style="font-size:14px;font-weight:800;color:{{ monthlyColor }}">Monthly</span>
+          <label style="position:relative;display:block;width:62px;height:34px;cursor:pointer;flex-shrink:0">
+            <input type="checkbox" checked="{{ annual }}" onChange="{{ toggleBilling }}" style="position:absolute;opacity:0">
+            <span style="position:absolute;inset:0;display:block;border-radius:999px;background:{{ switchBg }};transition:.25s"></span>
+            <span style="position:absolute;left:4px;top:4px;width:26px;height:26px;border-radius:50%;background:#fff;box-shadow:0 4px 12px rgba(0,0,0,.15);transition:.25s;transform:{{ knobTransform }}"></span>
+          </label>
+          <span style="display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:800;color:{{ annualColor }}">Annual <em style="font-style:normal;font-size:10px;padding:5px 8px;border-radius:999px;background:#78264b;color:#fff;white-space:nowrap">Save 20%</em></span>
+        </div>
+      </div>
+      <div class="rv-pricing-grid" ref="{{ revealRef }}" style="opacity:1;transform:none;transition:.7s ease;transition-delay:.12s;display:grid;grid-template-columns:repeat(3,1fr);gap:18px;align-items:start">
+        <article style="position:relative;padding:28px;border-radius:24px;background:#fff;border:1px solid #d6c2cf;box-shadow:0 22px 60px rgba(75,24,50,.12);display:flex;flex-direction:column;transition:.25s ease" style-hover="transform:translateY(-6px);box-shadow:0 28px 68px rgba(75,24,50,.18)">
+          <span style="font-size:12px;font-weight:800;color:#78264b;text-transform:uppercase;letter-spacing:.12em">Starter</span>
+          <div style="display:flex;gap:8px;align-items:flex-end;flex-wrap:wrap;margin:16px 0 8px">
+            <span style="color:#8a5a68;text-decoration:line-through;font-weight:700;font-size:13px">{{ starterOld }}</span>
+            <strong style="font:800 44px/1 'Manrope';color:#4d1832">{{ starterPrice }}</strong>
+            <small style="color:#3d3541;font-weight:700">/mo</small>
+          </div>
+          <p style="font-size:11px;color:#3d3541;margin:0 0 20px"><sc-if value="{{ annual }}"><span style="color:#8a5a68;text-decoration:line-through;font-weight:700">{{ starterOldYear }}</span> </sc-if>{{ starterNote }}</p>
+          <h3 style="font-size:17px;line-height:1.4;margin:0 0 14px">Skin analysis that works on your site</h3>
+          <ul style="list-style:none;padding:0;margin:0 0 10px;display:grid;gap:10px">
+            <sc-for list="{{ starterNumeric }}" as="f" hint-placeholder-count="2"><li style="font-size:12px;color:#4d1832;font-weight:700;line-height:1.5"><span style="color:#78264b;font-weight:800;margin-right:8px">✓</span>{{ f }}</li></sc-for>
+          </ul>
+          <div style="background:#f7eaf0;border-radius:14px;padding:12px 14px;margin:0 0 18px">
+            <ul style="list-style:none;padding:0;margin:0;display:grid;gap:10px">
+              <sc-for list="{{ starterExclusive }}" as="f" hint-placeholder-count="3"><li style="font-size:12px;color:#3d3541;line-height:1.5"><span style="color:#78264b;font-weight:800;margin-right:8px">✓</span>{{ f }}</li></sc-for>
+            </ul>
+          </div>
+          <div style="margin-bottom:20px">
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:4px"><span style="font-size:11px;font-weight:800;color:#4d1832">Total attributed revenue</span><div style="display:flex;gap:4px"><sc-for list="{{ revenueDots1 }}" as="d" hint-placeholder-count="3"><span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:{{ d }}"></span></sc-for></div></div>
+            <p style="font-size:10.5px;color:#8a7e87;margin:0 0 12px;line-height:1.4">{{ revenueCaption1 }}</p>
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:4px"><span style="font-size:11px;font-weight:800;color:#4d1832">Support level</span><div style="display:flex;gap:4px"><sc-for list="{{ supportDots1 }}" as="d" hint-placeholder-count="3"><span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:{{ d }}"></span></sc-for></div></div>
+            <p style="font-size:10.5px;color:#8a7e87;margin:0;line-height:1.4">{{ supportCaption1 }}</p>
+          </div>
+          <a href="get-started.html?plan=starter" onClick="{{ navigateSoft }}" style="display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 23px;border-radius:15px;font-weight:800;background:#fff;color:#78264b;border:1px solid #78264b;width:100%;box-sizing:border-box;transition:.15s" style-active="background:#78264b;color:#fff;box-shadow:0 14px 34px rgba(120,38,75,.23)">Starter</a>
+        </article>
+        <article class="rv-featured" style="position:relative;padding:28px;border-radius:24px;background:#ffffff;border:2px solid #78264b;box-shadow:0 22px 60px rgba(75,24,50,.12);display:flex;flex-direction:column;transform:translateY(-8px);transition:.25s ease" style-hover="transform:translateY(-14px);box-shadow:0 28px 68px rgba(75,24,50,.2)">
+          <span style="position:absolute;top:-14px;left:50%;transform:translateX(-50%);padding:6px 16px;border-radius:999px;background:#78264b;color:#fff;font-size:9px;font-weight:800;text-transform:uppercase;letter-spacing:.12em">Most popular</span>
+          <span style="font-size:12px;font-weight:800;color:#78264b;text-transform:uppercase;letter-spacing:.12em">Growth</span>
+          <div style="display:flex;gap:8px;align-items:flex-end;flex-wrap:wrap;margin:16px 0 8px">
+            <span style="color:#8a5a68;text-decoration:line-through;font-weight:700;font-size:13px">{{ growthOld }}</span>
+            <strong style="font:800 44px/1 'Manrope';color:#4d1832">{{ growthPrice }}</strong>
+            <small style="color:#3d3541;font-weight:700">/mo</small>
+          </div>
+          <p style="font-size:11px;color:#3d3541;margin:0 0 20px"><sc-if value="{{ annual }}"><span style="color:#8a5a68;text-decoration:line-through;font-weight:700">{{ growthOldYear }}</span> </sc-if>{{ growthNote }}</p>
+          <h3 style="font-size:17px;line-height:1.4;margin:0 0 14px">Skin analysis you control and learn from</h3>
+          <ul style="list-style:none;padding:0;margin:0 0 10px;display:grid;gap:10px">
+            <sc-for list="{{ growthNumeric }}" as="f" hint-placeholder-count="2"><li style="font-size:12px;color:#4d1832;font-weight:700;line-height:1.5"><span style="color:#78264b;font-weight:800;margin-right:8px">✓</span>{{ f }}</li></sc-for>
+          </ul>
+          <ul style="list-style:none;padding:0;margin:0 0 8px;display:grid;gap:10px">
+            <sc-for list="{{ growthInherited }}" as="f" hint-placeholder-count="3"><li style="font-size:12px;color:#6b5e68;line-height:1.5"><span style="color:#8c7d87;font-weight:800;margin-right:8px">✓</span>{{ f }}</li></sc-for>
+          </ul>
+          <div style="height:1px;background:#e6d3de;margin:0 0 12px"></div>
+          <div style="background:#f7eaf0;border-radius:14px;padding:12px 14px;margin:0 0 18px">
+            <span style="font-size:9px;font-weight:800;color:#78264b;text-transform:uppercase;letter-spacing:.1em;display:block;margin-bottom:8px">Exclusive to Growth</span>
+            <ul style="list-style:none;padding:0;margin:0;display:grid;gap:10px">
+              <sc-for list="{{ growthExclusive }}" as="f" hint-placeholder-count="4"><li style="font-size:12px;color:#4d1832;font-weight:700;line-height:1.5"><span style="color:#78264b;font-weight:800;margin-right:8px">✓</span>{{ f }}</li></sc-for>
+            </ul>
+          </div>
+          <div style="margin-bottom:20px">
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:4px"><span style="font-size:11px;font-weight:800;color:#4d1832">Total attributed revenue</span><div style="display:flex;gap:4px"><sc-for list="{{ revenueDots2 }}" as="d" hint-placeholder-count="3"><span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:{{ d }}"></span></sc-for></div></div>
+            <p style="font-size:10.5px;color:#8a7e87;margin:0 0 12px;line-height:1.4">{{ revenueCaption2 }}</p>
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:4px"><span style="font-size:11px;font-weight:800;color:#4d1832">Support level</span><div style="display:flex;gap:4px"><sc-for list="{{ supportDots2 }}" as="d" hint-placeholder-count="3"><span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:{{ d }}"></span></sc-for></div></div>
+            <p style="font-size:10.5px;color:#8a7e87;margin:0;line-height:1.4">{{ supportCaption2 }}</p>
+          </div>
+          <a href="get-started.html?plan=growth" onClick="{{ navigateSoft }}" style="display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 23px;border-radius:15px;font-weight:800;background:#fff;color:#78264b;border:1px solid #78264b;width:100%;box-sizing:border-box;transition:.15s" style-active="background:#78264b;color:#fff;box-shadow:0 14px 34px rgba(120,38,75,.23)">Growth</a>
+        </article>
+        <article style="position:relative;padding:28px;border-radius:24px;background:#ffffff;border:1px solid #d6c2cf;box-shadow:0 22px 60px rgba(75,24,50,.12);display:flex;flex-direction:column;transition:.25s ease" style-hover="transform:translateY(-6px);box-shadow:0 28px 68px rgba(75,24,50,.18)">
+          <span style="font-size:12px;font-weight:800;color:#78264b;text-transform:uppercase;letter-spacing:.12em">Enterprise</span>
+          <div style="display:flex;gap:8px;align-items:flex-end;flex-wrap:wrap;margin:16px 0 8px"><strong style="font:800 44px/1 'Manrope';color:#4d1832">Custom</strong></div>
+          <p style="font-size:11px;color:#3d3541;margin:0 0 20px">Starting around $1,500/month</p>
+          <h3 style="font-size:17px;line-height:1.4;margin:0 0 14px">Skin analysis as infrastructure</h3>
+          <ul style="list-style:none;padding:0;margin:0 0 10px;display:grid;gap:10px">
+            <sc-for list="{{ enterpriseNumeric }}" as="f" hint-placeholder-count="2"><li style="font-size:12px;color:#4d1832;font-weight:700;line-height:1.5"><span style="color:#78264b;font-weight:800;margin-right:8px">✓</span>{{ f }}</li></sc-for>
+          </ul>
+          <ul style="list-style:none;padding:0;margin:0 0 8px;display:grid;gap:10px">
+            <sc-for list="{{ enterpriseInherited }}" as="f" hint-placeholder-count="8"><li style="font-size:12px;color:#6b5e68;line-height:1.5"><span style="color:#8c7d87;font-weight:800;margin-right:8px">✓</span>{{ f }}</li></sc-for>
+          </ul>
+          <div style="height:1px;background:#e6d3de;margin:0 0 12px"></div>
+          <div style="background:#f7eaf0;border-radius:14px;padding:12px 14px;margin:0 0 18px">
+            <span style="font-size:9px;font-weight:800;color:#78264b;text-transform:uppercase;letter-spacing:.1em;display:block;margin-bottom:8px">Exclusive to Enterprise</span>
+            <ul style="list-style:none;padding:0;margin:0;display:grid;gap:10px">
+              <sc-for list="{{ enterpriseExclusive }}" as="f" hint-placeholder-count="4"><li style="font-size:12px;color:#4d1832;font-weight:700;line-height:1.5"><span style="color:#78264b;font-weight:800;margin-right:8px">✓</span>{{ f }}</li></sc-for>
+            </ul>
+          </div>
+          <div style="margin-bottom:20px">
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:4px"><span style="font-size:11px;font-weight:800;color:#4d1832">Total attributed revenue</span><div style="display:flex;gap:4px"><sc-for list="{{ revenueDots3 }}" as="d" hint-placeholder-count="3"><span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:{{ d }}"></span></sc-for></div></div>
+            <p style="font-size:10.5px;color:#8a7e87;margin:0 0 12px;line-height:1.4">{{ revenueCaption3 }}</p>
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:4px"><span style="font-size:11px;font-weight:800;color:#4d1832">Support level</span><div style="display:flex;gap:4px"><sc-for list="{{ supportDots3 }}" as="d" hint-placeholder-count="3"><span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:{{ d }}"></span></sc-for></div></div>
+            <p style="font-size:10.5px;color:#8a7e87;margin:0;line-height:1.4">{{ supportCaption3 }}</p>
+          </div>
+          <a href="get-started.html?plan=enterprise" onClick="{{ navigateSoft }}" style="display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 23px;border-radius:15px;font-weight:800;background:#fff;color:#78264b;border:1px solid #78264b;width:100%;box-sizing:border-box;transition:.15s" style-active="background:#78264b;color:#fff;box-shadow:0 14px 34px rgba(120,38,75,.23)">Personalized plan</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="rv-cta" style="scroll-margin-top:96px;position:relative;z-index:1;width:min(1500px,calc(100% - 4vw));margin:30px auto 0;padding:70px 5vw;display:grid;grid-template-columns:1fr .82fr;gap:34px;align-items:center;border-radius:34px;background:#4a1a33;color:#fff">
+      <div ref="{{ revealRef }}" style="opacity:1;transform:none;transition:.7s ease">
+        <span style="display:inline-block;margin-bottom:14px;color:#efc5da;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.18em">The next era of beauty commerce</span>
+        <h2 style="font:800 clamp(40px,5vw,74px)/1.02 'Manrope',sans-serif;margin:0">The world of online beauty is reinventing itself.</h2>
+        <h3 style="font:700 clamp(24px,3vw,42px)/1.15 'Manrope',sans-serif;color:#efc5da;margin:14px 0">Are you?</h3>
+      </div>
+      <form ref="{{ revealRef }}" onSubmit="{{ sendRequest }}" autoComplete="off" style="opacity:1;transform:none;transition:.7s ease;transition-delay:.12s;padding:25px;border-radius:24px;background:rgba(255,255,255,.1);backdrop-filter:blur(18px);border:1px solid rgba(255,255,255,.15)">
+        <div class="rv-form-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+          <label style="display:block;margin-bottom:13px"><span style="display:block;font-size:11px;font-weight:800;color:#f2dce7;margin-bottom:7px">First name</span><input name="demoFirstName" type="text" required="" style="width:100%;height:50px;padding:0 14px;border-radius:13px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.12);color:#fff;outline:none;box-sizing:border-box"></label>
+          <label style="display:block;margin-bottom:13px"><span style="display:block;font-size:11px;font-weight:800;color:#f2dce7;margin-bottom:7px">Last name</span><input name="demoLastName" type="text" required="" style="width:100%;height:50px;padding:0 14px;border-radius:13px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.12);color:#fff;outline:none;box-sizing:border-box"></label>
+        </div>
+        <label style="display:block;margin-bottom:13px"><span style="display:block;font-size:11px;font-weight:800;color:#f2dce7;margin-bottom:7px">Company name</span><input name="company" type="text" placeholder="Your skincare brand" required="" style="width:100%;height:50px;padding:0 14px;border-radius:13px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.12);color:#fff;outline:none;box-sizing:border-box"></label>
+        <label style="display:block;margin-bottom:13px"><span style="display:block;font-size:11px;font-weight:800;color:#f2dce7;margin-bottom:7px">Company email</span><input name="email" type="email" placeholder="name@company.com" required="" style="width:100%;height:50px;padding:0 14px;border-radius:13px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.12);color:#fff;outline:none;box-sizing:border-box"></label>
+        <label style="display:block;margin-bottom:13px"><span style="display:block;font-size:11px;font-weight:800;color:#f2dce7;margin-bottom:7px">Phone number</span><input name="phone" type="tel" placeholder="+1 555 000 0000" required="" style="width:100%;height:50px;padding:0 14px;border-radius:13px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.12);color:#fff;outline:none;box-sizing:border-box"></label>
+        <label style="display:block;margin-bottom:13px"><span style="display:block;font-size:11px;font-weight:800;color:#f2dce7;margin-bottom:7px">Website URL</span><input name="website" type="url" placeholder="https://yourbrand.com" style="width:100%;height:50px;padding:0 14px;border-radius:13px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.12);color:#fff;outline:none;box-sizing:border-box"></label>
+        <button type="submit" style="display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 23px;border-radius:15px;font-weight:800;background:#fff;color:#78264b;width:100%;border:0;cursor:pointer">{{ submitLabel }} <span>→</span></button>
+        <p aria-live="polite" style="font-size:12px;color:#f2dce7;margin:12px 0 0">{{ formStatus }}</p>
+      </form>
+      <div style="grid-column:1/-1"><sc-if value="{{ calendarOpen }}">
+        <div id="book-demo" style="padding:26px;border-radius:24px;background:#fff;color:#18121b;box-shadow:0 30px 80px rgba(0,0,0,.25);box-sizing:border-box">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:16px">
+            <div>
+              <span style="font-size:11px;font-weight:800;color:#78264b;text-transform:uppercase;letter-spacing:.14em">Live demo · 30 minutes</span>
+              <h3 id="rv-cal-title" style="font:800 28px/1.15 'Manrope',sans-serif;margin:6px 0 0">Book your live demo</h3>
+            </div>
+            <button type="button" onClick="{{ closeCalendar }}" aria-label="Close booking" style="width:40px;height:40px;border-radius:12px;border:1px solid #d6c2cf;background:#fff;color:#78264b;font-size:20px;cursor:pointer;flex-shrink:0">×</button>
+          </div>
+          <p style="font-size:13px;color:#3d3541;margin:12px 0 22px">Times are shown in Eastern Time (ET). Your Google Meet link is sent after you book.</p>
+          <p style="font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.1em;color:#4d1832;margin:0 0 10px">1. Pick a day</p>
+          <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-bottom:22px">
+            <sc-for list="{{ days }}" as="d" hint-placeholder-count="10">
+              <button type="button" data-key="{{ d.key }}" onClick="{{ pickDay }}" style="{{ d.style }}"><span style="display:block;font-size:11px;font-weight:700;opacity:.8">{{ d.weekday }}</span><strong style="font-size:15px">{{ d.date }}</strong></button>
+            </sc-for>
+          </div>
+          <p style="font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.1em;color:#4d1832;margin:0 0 10px">2. Pick a 30-minute slot</p>
+          <sc-if value="{{ noDaySelected }}"><p style="font-size:13px;color:#3d3541;margin:0">Select a day to see its times.</p></sc-if>
+          <sc-if value="{{ hasDay }}">
+            <sc-if value="{{ hasSlots }}">
+              <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px">
+                <sc-for list="{{ daySlots }}" as="t" hint-placeholder-count="6">
+                  <button type="button" data-time="{{ t.time }}" onClick="{{ pickSlot }}" style="{{ t.style }}">{{ t.label }}</button>
+                </sc-for>
+              </div>
+            </sc-if>
+            <sc-if value="{{ noSlots }}"><p style="font-size:13px;color:#3d3541;margin:0">No open times on this day. Please choose another day.</p></sc-if>
+          </sc-if>
+          <div style="margin-top:24px;display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap">
+            <p style="font-size:13px;color:#4d1832;font-weight:700;margin:0">{{ selectionLabel }}</p>
+            <button type="button" onClick="{{ confirmBooking }}" style="display:inline-flex;align-items:center;gap:10px;padding:14px 22px;border-radius:15px;font-weight:800;background:#78264b;color:#fff;border:0;cursor:pointer">Confirm booking <span>→</span></button>
+          </div>
+          <p aria-live="polite" style="font-size:12px;color:#3d3541;margin:12px 0 0">{{ bookingNote }}</p>
+        </div>
+      </sc-if></div>
+    </section>
+  </main>
+
+  <footer style="position:relative;z-index:1;width:min(1500px,100%);margin:auto;padding:48px 4vw 24px">
+    <div class="rv-footer" style="display:grid;grid-template-columns:240px 1fr 1fr;gap:30px;align-items:start">
+      <img src="assets/renovaa-logo-cropped.png" alt="RENOVAA" style="width:220px;display:block">
+      <p style="margin:0;color:#3d3541;line-height:1.6">From skin analysis to cart — inside your brand experience.</p>
+      <div class="rv-footer-links" style="display:flex;justify-content:flex-end;gap:18px;flex-wrap:wrap">
+        <a href="#problem" style="font-size:12px;color:#3d3541">How it works</a>
+        <a href="#pricing" style="font-size:12px;color:#3d3541">Pricing</a>
+        <a href="live-demos.html" onClick="{{ navigateSoft }}" style="font-size:12px;color:#3d3541">Try Demo Live</a>
+        <a href="partnerships.html" onClick="{{ navigateSoft }}" style="font-size:12px;color:#3d3541">Partnerships</a>
+        <a href="about-renovaa.html" onClick="{{ navigateSoft }}" style="font-size:12px;color:#3d3541">About Us</a>
+        <a href="#contact" style="font-size:12px;color:#3d3541">Contact us</a>
+      </div>
+    </div>
+    <div style="border-top:1px solid #d6c2cf;margin-top:35px;padding-top:18px;display:flex;justify-content:space-between;font-size:11px;color:#3d3541">
+      <span>© 2026 RENOVAA. All rights reserved.</span><span>Privacy · Terms · Data processing</span>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { annual: false, formStatus: '', sending: false, sent: false, calendarOpen: false, dayKey: '', slotTime: '', bookingNote: '', slots: {} };
+  endpoint = 'https://default36f64e6050814bfd8d72eedeecb451.70.environment.api.powerplatform.com:443/powerautomate/automations/direct/cu/11/workflows/c4fd142b2d5f48aba12260f44be8cbe0/triggers/manual/paths/invoke?api-version=1&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=Y-dn_wHStDi17NnTBuIOU0Q7oyTVV5q5iV-gkofO844';
+  revealEls = [];
+
+  revealRef = (el) => {
+    if (el && !this.revealEls.includes(el)) this.revealEls.push(el);
+  };
+
+  demoRef = (el) => {
+    if (!el || this._demo === el) return;
+    this._demo = el;
+    el.addEventListener('timeupdate', () => this.syncDemo());
+    el.addEventListener('loadedmetadata', () => this.syncDemo());
+    el.addEventListener('play', () => el.parentNode.classList.add('is-playing'));
+    el.addEventListener('pause', () => el.parentNode.classList.remove('is-playing'));
+    el.addEventListener('ended', () => el.parentNode.classList.remove('is-playing'));
+    el.addEventListener('volumechange', () => el.parentNode.classList.toggle('is-muted', el.muted || el.volume === 0));
+  };
+  seekRef = (el) => {
+    if (!el || this._seekEl === el) return;
+    this._seekEl = el;
+    el.addEventListener('input', () => {
+      const v = this._demo;
+      if (v && v.duration) v.currentTime = (el.value / 100) * v.duration;
+    });
+  };
+  volRef = (el) => {
+    if (!el || this._volEl === el) return;
+    this._volEl = el;
+    el.addEventListener('input', () => {
+      const v = this._demo;
+      if (!v) return;
+      v.volume = Number(el.value);
+      v.muted = Number(el.value) === 0;
+    });
+  };
+  timeRef = (el) => { this._timeEl = el; };
+  syncDemo = () => {
+    const v = this._demo;
+    if (!v) return;
+    const fmt = (s) => { s = Math.floor(s || 0); return Math.floor(s / 60) + ':' + String(s % 60).padStart(2, '0'); };
+    if (this._seekEl && v.duration) this._seekEl.value = (v.currentTime / v.duration) * 100;
+    if (this._timeEl) this._timeEl.textContent = fmt(v.currentTime) + ' / ' + fmt(v.duration);
+  };
+  muteDemo = () => {
+    const v = this._demo;
+    if (v) v.muted = !v.muted;
+  };
+  toggleDemo = () => {
+    const v = this._demo;
+    if (!v) return;
+    if (v.paused) { v.play(); } else { v.pause(); }
+  };
+  restartDemo = () => {
+    const v = this._demo;
+    if (!v) return;
+    v.currentTime = 0;
+    v.play();
+  };
+
+  videoRef = (el) => {
+    if (!el || this._video === el) return;
+    this._video = el;
+    el.muted = true;
+    el.loop = false;
+    let reversing = false;
+    let rafId = null;
+    const playForward = () => {
+      reversing = false;
+      el.playbackRate = 1;
+      const p = el.play();
+      if (p && p.catch) p.catch(() => {});
+    };
+    const stepReverse = () => {
+      if (!reversing) return;
+      const dt = 1 / 30;
+      const t = el.currentTime - dt;
+      if (t <= 0) {
+        el.currentTime = 0;
+        reversing = false;
+        playForward();
+        return;
+      }
+      el.currentTime = t;
+      rafId = requestAnimationFrame(stepReverse);
+    };
+    const playReverse = () => {
+      el.pause();
+      reversing = true;
+      rafId = requestAnimationFrame(stepReverse);
+    };
+    el.addEventListener('canplay', function initialPlay() {
+      el.removeEventListener('canplay', initialPlay);
+      playForward();
+    });
+    el.addEventListener('ended', playReverse);
+  };
+
+  reveal(el) { el.style.opacity = '1'; el.style.transform = 'none'; }
+
+  componentDidMount() {
+    const show = () => this.revealEls.forEach((el) => this.reveal(el));
+    if (!('IntersectionObserver' in window)) { show(); return; }
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach((e) => { if (e.isIntersecting) this.reveal(e.target); });
+    }, { threshold: 0, rootMargin: '0px 0px -5% 0px' });
+    this.revealEls.forEach((el) => {
+      const r = el.getBoundingClientRect();
+      if (r.top < window.innerHeight) this.reveal(el); // already on screen
+      else obs.observe(el);
+    });
+    this._obs = obs;
+    // Failsafe: never leave anything hidden.
+    setTimeout(show, 600);
+  }
+
+  navigateSoft = (e) => {
+    const href = e.currentTarget.getAttribute('href');
+    if (!href) return;
+    e.preventDefault();
+    document.body.style.transition = 'opacity .45s ease';
+    document.body.style.opacity = '0';
+    setTimeout(() => { window.location.href = href; }, 450);
+  };
+
+  toggleBilling = () => this.setState((s) => ({ annual: !s.annual }));
+
+  sendRequest = (e) => {
+    e.preventDefault();
+    if (this.state.sent) { this.openCalendar(); return; }
+    if (this.state.sending) return;
+    const d = Object.fromEntries(new FormData(e.target).entries());
+    this.setState({ sending: true, formStatus: 'Sending your request…' });
+    fetch(this.endpoint, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ type: 'get-started', firstName: d.demoFirstName, lastName: d.demoLastName, company: d.company, email: d.email, phone: d.phone, website: d.website || '' }),
+    })
+      .then((r) => { if (!r.ok) throw new Error('send failed'); this.setState({ sending: false, sent: true, formStatus: 'Thanks. Your request is in. Book a live demo below.' }); })
+      .catch(() => this.setState({ sending: false, formStatus: "We couldn't send your request. Please email hello@renovaa.net directly." }));
+  };
+
+  openCalendar = () => this.setState({ calendarOpen: true });
+  closeCalendar = () => this.setState({ calendarOpen: false });
+  pickDay = (e) => this.setState({ dayKey: e.currentTarget.dataset.key, slotTime: '', bookingNote: '' });
+  pickSlot = (e) => this.setState({ slotTime: e.currentTarget.dataset.time, bookingNote: '' });
+  confirmBooking = () => {
+    if (!this.state.dayKey || !this.state.slotTime) {
+      this.setState({ bookingNote: 'Choose a day and a time first.' });
+      return;
+    }
+    this.setState({ bookingNote: 'Scheduling is not connected yet, so this time is not booked.' });
+  };
+
+  dayList() {
+    const out = [];
+    const today = new Date();
+    for (let i = 1; out.length < 10 && i < 40; i++) {
+      const dt = new Date(today.getFullYear(), today.getMonth(), today.getDate() + i);
+      if (dt.getDay() === 0 || dt.getDay() === 6) continue;
+      const key = `${dt.getFullYear()}-${String(dt.getMonth() + 1).padStart(2, '0')}-${String(dt.getDate()).padStart(2, '0')}`;
+      out.push({
+        key,
+        weekday: dt.toLocaleDateString('en-US', { weekday: 'short' }),
+        date: dt.toLocaleDateString('en-US', { month: 'short', day: 'numeric' }),
+        style: this.dayStyle(key === this.state.dayKey),
+      });
+    }
+    return out;
+  }
+
+  slotList() {
+    const times = (this.state.slots && this.state.dayKey && this.state.slots[this.state.dayKey]) || [];
+    return times.map((t) => ({ time: t, label: t, style: this.slotStyle(t === this.state.slotTime) }));
+  }
+
+  selectionLabel() {
+    if (!this.state.dayKey || !this.state.slotTime) return 'No time selected yet';
+    const day = this.dayList().find((d) => d.key === this.state.dayKey);
+    return `Selected: ${day ? day.weekday + ' ' + day.date : this.state.dayKey} at ${this.state.slotTime} ET`;
+  }
+
+  dayStyle(on) {
+    const base = 'padding:10px 6px;border-radius:14px;cursor:pointer;text-align:center;font-family:inherit;';
+    return on
+      ? base + 'border:1px solid #78264b;background:#78264b;color:#fff'
+      : base + 'border:1px solid #d6c2cf;background:#fff;color:#4d1832';
+  }
+
+  slotStyle(on) {
+    const base = 'padding:11px 6px;border-radius:12px;cursor:pointer;font-family:inherit;font-weight:700;font-size:13px;';
+    return on
+      ? base + 'border:1px solid #78264b;background:#78264b;color:#fff'
+      : base + 'border:1px solid #d6c2cf;background:#fff;color:#4d1832';
+  }
+
+  renderVals() {
+    const annual = this.state.annual;
+    const s = (v) => v;
+    return {
+      revealRef: this.revealRef,
+      videoRef: this.videoRef,
+      demoRef: this.demoRef,
+      toggleDemo: this.toggleDemo,
+      restartDemo: this.restartDemo,
+      seekRef: this.seekRef,
+      volRef: this.volRef,
+      timeRef: this.timeRef,
+      muteDemo: this.muteDemo,
+      navigateSoft: this.navigateSoft,
+      toggleBilling: this.toggleBilling,
+      sendRequest: this.sendRequest,
+      openCalendar: this.openCalendar,
+      closeCalendar: this.closeCalendar,
+      pickDay: this.pickDay,
+      pickSlot: this.pickSlot,
+      confirmBooking: this.confirmBooking,
+      submitLabel: this.state.sent ? 'Book Live Demo' : (this.state.sending ? 'Sending…' : 'Contact us'),
+      calendarOpen: this.state.calendarOpen,
+      days: this.dayList(),
+      daySlots: this.slotList(),
+      noDaySelected: !this.state.dayKey,
+      hasDay: !!this.state.dayKey,
+      hasSlots: this.slotList().length > 0,
+      noSlots: this.slotList().length === 0,
+      selectionLabel: this.selectionLabel(),
+      bookingNote: this.state.bookingNote,
+      formStatus: this.state.formStatus,
+      annual,
+      billingParam: annual ? 'annual' : 'monthly',
+      monthlyColor: annual ? '#8a7c85' : '#78264b',
+      annualColor: annual ? '#78264b' : '#8a7c85',
+      switchBg: annual ? '#78264b' : '#e7d7df',
+      knobTransform: annual ? 'translateX(28px)' : 'translateX(0)',
+      starterOld: annual ? '$200/mo' : '',
+      starterPrice: annual ? '$160' : '$200',
+      starterOldYear: '$2400/year',
+      starterNote: annual ? 'Billed annually · $1920/year' : 'Billed monthly',
+      growthOld: annual ? '$600/mo' : '',
+      growthPrice: annual ? '$480' : '$600',
+      growthOldYear: '$7200/year',
+      growthNote: annual ? 'Billed annually · $5760/year' : 'Billed monthly',
+      lostSteps: [
+        { num: '01', icon: '◫', title: 'Visits your website', body: 'They are unsure about an ingredient, their skin, or which product is right.', style: this.step() },
+        { num: '02', icon: '▣', title: 'Takes a screenshot', body: 'They capture the product page or ingredient list instead of asking your brand.', style: this.step() },
+        { num: '03', icon: '✦', title: 'Asks external AI', body: '“Is this suitable for my skin?” The answer happens outside your website.', style: this.step() },
+        { num: '04', icon: '⌁', title: 'Gets a generic choice', body: 'The assistant suggests what appears easiest or most convenient to buy.', style: this.step() },
+        { num: '05', icon: '×', title: 'Redirected and lost', body: 'They move to Amazon or a rival, taking the sale and relationship with them.', style: this.step('lost') },
+      ],
+      wonSteps: [
+        { num: '01', icon: '◎', title: 'Captures', body: 'The customer uploads a selfie or uses the live camera with quality checks and facial mapping.', style: this.step() },
+        { num: '02', icon: '⌖', title: 'Interprets', body: 'RENOVAA combines visible skin signals with sensitivity, preferences, and declared goals.', style: this.step() },
+        { num: '03', icon: '◇', title: 'Matches', body: 'Product logic maps customer needs to your SKUs, priorities, and exclusion rules.', style: this.step() },
+        { num: '04', icon: '✧', title: 'Builds the routine', body: 'A clear morning and evening routine is created from your catalog.', style: this.step() },
+        { num: '05', icon: '✓', title: 'The brand finally converts', body: 'Every recommendation links directly to your product page and cart.', style: this.step('won') },
+      ],
+      proof: [
+        { n: '47%', body: 'Already use AI to support purchase decisions, often outside the brand website.' },
+        { n: '50M+', body: 'Shopping-related queries are sent to ChatGPT every day.' },
+        { n: '3×', body: 'Greater consumer trust in retailer-owned AI than third-party AI assistants.' },
+      ],
+      benefits: [
+        { n: '01', title: 'Keep the sale on your website', body: 'Customer uncertainty is resolved inside your funnel — not on Amazon or inside an external chatbot.' },
+        { n: '02', title: 'A true white-label experience', body: 'Your identity, typography, colors, domain, catalog, and tone of voice.' },
+        { n: '03', title: 'Dermatologist-validated guidance', body: 'Clinically informed consumer guidance, reviewed before launch and delivered without medical claims.' },
+        { n: '04', title: 'Designed for rapid deployment', body: 'Transparent plans and streamlined implementation without a traditional enterprise sales cycle.' },
+        { n: '05', title: 'Marketing AI for Instagram and Facebook', body: 'Daily post options built from your scan and checkout data. Pick one, edit it, and publish.' },
+        { n: '06', title: 'SEO AI for your store', body: 'Weekly SEO content built from your scan and click data, so search brings in shoppers who already match your products.' },
+      ],
+      starterNumeric: ['1,000 scans/month', '$0.15 per additional scan'],
+      growthNumeric: ['5,000 scans/month', '$0.10 per additional scan'],
+      enterpriseNumeric: ['Custom scan volume', 'Volume-based pricing'],
+      starterExclusive: ['Internal AI assistant in your dashboard', 'Concern breakdown: see which skin concerns customers ask about most', 'Complete widget + AI model', 'Catalog-built routines', 'Logo and color customization'],
+      growthInherited: ['Internal AI assistant in your dashboard', 'Concern breakdown: see which skin concerns customers ask about most', 'Complete widget + AI model', 'Catalog-built routines', 'Logo and color customization'],
+      growthExclusive: ['Advanced branding and merchandising', 'Re-scan journeys and lead capture', 'Personal WhatsApp agent', 'Marketing AI agent', 'SEO AI agent'],
+      enterpriseInherited: ['Internal AI assistant in your dashboard', 'Concern breakdown: see which skin concerns customers ask about most', 'Complete widget + AI model', 'Catalog-built routines', 'Logo and color customization', 'Advanced branding and merchandising', 'Re-scan journeys and lead capture', 'Personal WhatsApp agent', 'Marketing AI agent', 'SEO AI agent'],
+      enterpriseExclusive: ['Custom AI and recommendation logic', 'Margin- and inventory-aware rules', 'Fully custom white-label UI', 'API for app, kiosk, retail, and CRM'],
+      revenueDots1: ['#78264b', '#e9dbe4', '#e9dbe4'],
+      revenueDots2: ['#78264b', '#78264b', '#e9dbe4'],
+      revenueDots3: ['#78264b', '#78264b', '#78264b'],
+      revenueCaption1: 'Total attributed revenue only',
+      revenueCaption2: 'Full scan-to-purchase attribution, trends, concern breakdown, demographics',
+      revenueCaption3: 'Everything in Growth, plus predictive LTV and custom cohort modeling',
+      supportDots1: ['#78264b', '#e9dbe4', '#e9dbe4'],
+      supportDots2: ['#78264b', '#78264b', '#e9dbe4'],
+      supportDots3: ['#78264b', '#78264b', '#78264b'],
+      supportCaption1: 'Standard support',
+      supportCaption2: 'Priority support',
+      supportCaption3: 'Premium support + dedicated point of contact',
+    };
+  }
+
+  step(kind) {
+    let base = 'position:relative;z-index:1;padding:20px;border-radius:22px;border:1px solid #d6c2cf;box-shadow:0 14px 38px rgba(77,24,50,.07);background:rgba(255,255,255,.92);transition:.25s ease';
+    if (kind === 'lost') base = 'position:relative;z-index:1;padding:20px;border-radius:22px;box-shadow:0 14px 38px rgba(77,24,50,.07);filter:saturate(.55);background:#f2f1f2;border:1px solid #d6c2cf;transition:.25s ease';
+    if (kind === 'won') base = 'position:relative;z-index:1;padding:20px;border-radius:22px;box-shadow:0 14px 38px rgba(77,24,50,.07);border:1px solid rgba(120,38,75,.35);background:#f5e6ed;transition:.25s ease';
+    return base;
+  }
+}
+</script>
+</body>
+</html>
